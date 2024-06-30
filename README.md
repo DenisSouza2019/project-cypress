@@ -1,2 +1,2 @@
 # project-cypress
-Estudos cypress, analisando metodologia e aplicabilidades
+Estudos cypress, analisando metodologia e aplicabilidades.
