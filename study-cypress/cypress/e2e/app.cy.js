@@ -28,11 +28,12 @@ const registerForm = new RegisterForm();
 
 const colors ={
   erros:"rgb(220, 53, 69)",
-  success:"rgb(168, 210, 101)"
+  success:"rgb(222, 226, 230)"
 }
 
-describe("Image Registration", () => {
-  describe("Scenario-1: Submitting an image with invalid inputs", () => {
+describe("HU - Registro de Imagem", () => {
+
+  describe("Cenário 1: Enviando uma imagem com entradas inválidas", () => {
     //Limpar o cenario de teste uma vez que o teste vai ser executado de novo, liberando espaço no localstorage
     afterEach(() => {
       cy.clearLocalStorage();
@@ -44,32 +45,32 @@ describe("Image Registration", () => {
       url: ""
     }
 
-    it("Given I am on the image registration page", () => {
+    it("Dado que estou na página de registro de imagens", () => {
       cy.visit("/");
     });
 
-    it(`When I enter "${inputs.title}"" in the title field`, () => {
+    it(`Quando eu insiro "${inputs.title}"" no campo de titulo`, () => {
       registerForm.typeTitle(inputs.title);
     })
 
-    it(`When I enter "${inputs.url}"" in the URL field`, () => {
+    it(`Quando eu insiro "${inputs.url}"" no campo de URL`, () => {
       registerForm.typeUrl(inputs.url);
     })
 
-    it(`Then I click the submit button`,() => {
+    it(`Então clico no botão enviar`,() => {
       registerForm.clickSubmit();
     })
 
-    it(`Then I should see "Please type a title for the image" message above the title field`,() => {
+    it(`Então, devo ver a mensagem "Please type a title for the image" abaixo do campo de titulo`,() => {
       //registerForm.elements.titleFeedback().should(element =>{debugger});
      registerForm.elements.titleFeedback().should("contain.text", "Please type a title for the image");
     })
 
-    it(`And I should see "Please type a valid URL" message above the imageUrl field`,() => {
+    it(`E devo ver a mensagem "Please type a valid URL" abaixo do campo de URL`,() => {
       registerForm.elements.urlFeedback().should("contain.text", "Please type a valid URL");
     })
 
-    it(`And I should see an exclamation icon in the title and URL fields`,() => {
+    it(`E devo ver um ícone de exclamação nos campos de titulo e URL`,() => {
       registerForm.elements.titleInput().should(([element]) =>{
         const styles = window.getComputedStyle(element);
         const border = styles.getPropertyValue("border-right-color");
@@ -90,4 +91,42 @@ describe("Image Registration", () => {
 
     
   });
+
+  describe("Cenário 2: Enviando uma imagem com entradas válidas usando a tecla Enter", ()=>{
+    
+    afterEach(() => {
+      cy.clearLocalStorage();
+    });
+
+    const inputs = {
+      title: "Alien BR",
+      url: "https://cdn.mos.cms.futurecdn.net/eM9EvWyDxXcnQTTyH8c8p5-1200-80.jpg"
+    }
+
+    it("Dado que estou na página de registro de imagens", () => {
+      cy.visit("/");
+    });
+
+    it(`Quando eu digito "${inputs.title}" no campo de título`, () => {
+      registerForm.typeTitle(inputs.title);
+    });
+
+    it('Então devo ver um ícone de verificação no campo de título',() => {
+      registerForm.elements.titleInput().should(([element]) =>{
+        
+        const styles = window.getComputedStyle(element);
+        const border = styles.getPropertyValue("border-right-color");
+        assert.strictEqual(border, colors.success)
+        //debugger
+      });
+    })
+
+    // it(`Quando eu digito "${inputs.url}" no campo de URL`, () => {
+      // registerForm.typeUrl(inputs.url);
+    // });
+
+    // it(`E pressiono o botão de Enter para enviar o formulário`, () => {
+      // registerForm.clickSubmit();
+    // });
+  })
 });

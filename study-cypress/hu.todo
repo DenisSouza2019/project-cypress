@@ -1,13 +1,13 @@
-Recurso: Registro de Imagem
+HU-Registro de Imagem:
 
-  Cenário 1: Enviando uma imagem com entradas inválidas
-    Dado que estou na página de registro de imagens
-    Quando eu insiro "" no campo de título
-    Então eu insiro "" no campo URL
-    Então clico no botão enviar
-    Então, devo ver a mensagem "Por favor, digite um título para a imagem" acima do campo de título
-    E devo ver a mensagem "Digite um URL válido" acima do campo imageUrl
-    E devo ver um ícone de exclamação nos campos de título e URL
+  Cenário 1-Enviando uma imagem com entradas inválidas:
+    ☐ Dado que estou na página de registro de imagens
+    ☐ Quando eu insiro "" no campo de título
+    ☐ Então eu insiro "" no campo URL
+    ☐ Então clico no botão enviar
+    ☐ Então, devo ver a mensagem "Please type a title for the image" abaixo do campo de título
+    ☐ E devo ver a mensagem "Please type a valid URL" acima do campo imageUrl
+    ☐ E devo ver um ícone de exclamação nos campos de título e URL
 
   Cenário 2: Enviando uma imagem com entradas válidas usando a tecla Enter
     Dado que estou na página de registro de imagens
