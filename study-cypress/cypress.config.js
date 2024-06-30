@@ -9,7 +9,7 @@ export default defineConfig({
     baseUrl:"https://erickwendel.github.io/vanilla-js-web-app-example/",
     // não vai limpar o estado da tela entre os testes
     // vai manter o estado da tela, até que um teste mude o estado
-    preserveCookies: true,
+    //preserveCookies: true,
     // executa os testes em um ambiente isolado
     // sem interferir no teste a teste
     testIsolation: false
