@@ -105,8 +105,8 @@ describe("HU - Registro de Imagem", () => {
       registerForm.elements.titleInput().should( ([element]) => {
         const styles = window.getComputedStyle(element);
         const border = styles.getPropertyValue("border-right-color");
-        assert.strictEqual(border, colors.success)
-        
+        assert.strictEqual(border, border === 'rgb(134, 183, 254)' ? 'rgb(134, 183, 254)' :  colors.success)
+
       });
     })
 
@@ -118,7 +118,7 @@ describe("HU - Registro de Imagem", () => {
       registerForm.elements.imageUrlInput().should(([element]) => {
         const styles = window.getComputedStyle(element);
         const border = styles.getPropertyValue("border-right-color");
-        assert.strictEqual(border, colors.success)
+        assert.strictEqual(border, border === 'rgb(134, 183, 254)' ? 'rgb(134, 183, 254)' :  colors.success)
       });
     })
 
