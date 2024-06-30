@@ -1,36 +1,36 @@
 HU-Registro de Imagem:
 
-  Cenário 1-Enviando uma imagem com entradas inválidas:
-    ☐ Dado que estou na página de registro de imagens
-    ☐ Quando eu insiro "" no campo de título
-    ☐ Então eu insiro "" no campo URL
-    ☐ Então clico no botão enviar
-    ☐ Então, devo ver a mensagem "Please type a title for the image" abaixo do campo de título
-    ☐ E devo ver a mensagem "Please type a valid URL" acima do campo imageUrl
-    ☐ E devo ver um ícone de exclamação nos campos de título e URL
+  Cenário 1 - Enviando uma imagem com entradas inválidas:
+    ✔ Dado que estou na página de registro de imagens @done(24-06-30 10:52)
+    ✔ Quando eu insiro "" no campo de título @done(24-06-30 10:53)
+    ✔ Então eu insiro "" no campo URL @done(24-06-30 10:53)
+    ✔ Então clico no botão enviar @done(24-06-30 10:53)
+    ✔ Então, devo ver a mensagem "Please type a title for the image" abaixo do campo de título @done(24-06-30 10:53)
+    ✔ E devo ver a mensagem "Please type a valid URL" acima do campo imageUrl @done(24-06-30 10:53)
+    ✔ E devo ver um ícone de exclamação nos campos de título e URL @done(24-06-30 10:53)
 
-  Cenário 2: Enviando uma imagem com entradas válidas usando a tecla Enter
-    Dado que estou na página de registro de imagens
-    Quando eu digito "Alien BR" no campo de título
-    Então devo ver um ícone de verificação no campo de título
-    Quando eu insiro "https://cdn.mos.cms.futurecdn.net/eM9EvWyDxXcnQTTyH8c8p5-1200-80.jpg" no campo URL
-    Então devo ver um ícone de verificação no campo imageUrl
-    Então posso pressionar Enter para enviar o formulário
-    E a lista de imagens cadastradas deverá ser atualizada com o novo item
-    E o novo item deve ser armazenado no localStorage
-    Então as entradas devem ser limpas
+  Cenário 2 - Enviando uma imagem com entradas válidas usando a tecla:
+    ✔ Dado que estou na página de registro de imagens @done(24-06-30 10:57)
+    ✔ Quando eu digito "Alien BR" no campo de título @done(24-06-30 10:58)
+    ✔ Então devo ver um ícone de verificação no campo de título @done(24-06-30 10:58)
+    ✔ Quando eu insiro "https://cdn.mos.cms.futurecdn.net/eM9EvWyDxXcnQTTyH8c8p5-1200-80.jpg" no campo URL @done(24-06-30 10:59)
+    ✔ Então devo ver um ícone de verificação no campo imageUrl @done(24-06-30 11:00)
+    ✔ Então posso pressionar Enter para enviar o formulário @done(24-06-30 11:01)
+    ✔ E a lista de imagens cadastradas deverá ser atualizada com o novo item @done(24-06-30 11:05)
+    ✔ E o novo item deve ser armazenado no localStorage @done(24-06-30 11:27)
+    ✔ Então as entradas devem ser limpas @done(24-06-30 11:29)
 
-  Cenário 3: Enviando uma imagem e atualizando a lista
-    Dado que estou na página de registro de imagens
-    Então eu digitei "BR Alien" no campo do título
-    Então digitei "https://cdn.mos.cms.futurecdn.net/eM9EvWyDxXcnQTTyH8c8p5-1200-80.jpg" no campo URL
-    Quando clico no botão enviar
-    E a lista de imagens cadastradas deverá ser atualizada com o novo item
-    E o novo item deve ser armazenado no localStorage
-    Então as entradas devem ser limpas
+  Cenário 3 - Enviando uma imagem e atualizando a lista:
+    ✔ Dado que estou na página de registro de imagens @done(24-06-30 11:30)
+    ✔ Então eu digitei "BR Alien" no campo do título @done(24-06-30 11:31)
+    ✔ Então digitei "https://cdn.mos.cms.futurecdn.net/eM9EvWyDxXcnQTTyH8c8p5-1200-80.jpg" no campo URL @done(24-06-30 11:32)
+    ✔ Quando clico no botão enviar @done(24-06-30 11:34)
+    ✔ E a lista de imagens cadastradas deverá ser atualizada com o novo item @done(24-06-30 11:35)
+    ✔ E o novo item deve ser armazenado no localStorage @done(24-06-30 11:35)
+    ✔ Então as entradas devem ser limpas @done(24-06-30 11:35)
 
-  Cenário 4: Atualizando a página após enviar uma imagem clicando no botão enviar
-    Dado que estou na página de registro de imagens
-    Então enviei uma imagem clicando no botão enviar
-    Quando eu atualizo a página
-    Então ainda devo ver a imagem enviada na lista de imagens cadastradas
+  Cenário 4 - Atualizando a página após enviar uma imagem clicando no botão enviar:
+    ✔ Dado que estou na página de registro de imagens @done(24-06-30 11:36)
+    ✔ Então enviei uma imagem clicando no botão enviar @done(24-06-30 11:38)
+    ✔ Quando eu atualizo a página @done(24-06-30 11:39)
+    ✔ Então ainda devo ver a imagem enviada na lista de imagens cadastradas @done(24-06-30 12:02)
