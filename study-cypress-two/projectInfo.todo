@@ -2,3 +2,13 @@ Para acessar o Front-End, acesse:
     ✔ https://adopet-frontend-cypress.vercel.app @done(24-06-30 19:04)
 Para acessar o Back-End, acesse:
     ✔ https://adopet-api-i8qu.onrender.com/adotante/ @done(24-06-30 19:04)
+
+    Funcionalidade: Cadastro no site Adopet
+
+Cenário: Realizar um cadastro no site com sucesso:
+    ✔ O usuário acessa a página de cadastro. @done(24-07-06 08:36)
+    ✔ O usuário preenche o campo "Nome". @done(24-07-06 08:36)
+    ✔ O usuário preenche o campo "E-mail" com um endereço de e-mail válido. @done(24-07-06 08:37)
+    ✔ O usuário preenche o campo "Senha" com uma senha válida. @done(24-07-06 08:37)
+    ✔ O usuário preenche o campo "Confirmação de Senha" com a mesma senha inserida no passo anterior. @done(24-07-06 08:37)
+    ✔ O usuário clica no botão "Cadastrar". @done(24-07-06 08:37)
