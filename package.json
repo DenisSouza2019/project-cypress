@@ -1,0 +1,23 @@
+{
+  "name": "study-cypress-two",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "v20.7.0"
+  },
+  "scripts": {
+    "start": "npx cypress open",
+    "reports": "npx cypress run --reporter mochawesome",
+    "cypress:web": "npx cypress open",
+    "cypress:headless": "npx cypress run --browser electron",
+    "cypress:integration":"npx cypress run --record --key ${{ secrets.GITHUB_TOKEN }}"
+  },
+  "keywords": [],
+  "author": "Denis Rosa",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.7.2",
+    "mochawesome": "^7.1.3"
+  }
+}
