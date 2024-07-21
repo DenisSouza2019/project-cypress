@@ -11,7 +11,7 @@
     "reports": "npx cypress run --reporter mochawesome",
     "cypress:web": "npx cypress open",
     "cypress:headless": "npx cypress run --browser electron",
-    "cypress:integration":"npx cypress run --record --key c9d3be65-ddfc-40e6-b20f-dfefb320c2ff"
+    "cypress:integration":"npx cypress run --record --key ${{ secrets.GITHUB_TOKEN }}"
   },
   "keywords": [],
   "author": "Denis Rosa",
