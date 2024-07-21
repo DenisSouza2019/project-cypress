@@ -29,3 +29,7 @@ jobs:
       - name: Run Cypress tests
         run: npm run cypress:headless
         working-directory: ./study-cypress-two
+
+      - name: Run Cypress tests integration Cloud Cypress
+        run: npm run cypress:integration
+        working-directory: ./study-cypress-two
