@@ -1,6 +1,4 @@
 describe('Api Adopet', () => {
-    const authorization = 'Bearer ' + Cypress.env('token');
-    //const authorization = `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMTY0M2NkNi03MTEyLTQxNWItOTVkMi0wNzkwNGIwZDFhMWMiLCJhZG9wdGVyTmFtZSI6IkFuYSBkZSBKZXN1cyIsImlhdCI6MTcyMTU5MTUxMiwiZXhwIjoxNzIxODUwNzEyfQ.OTN9SzFaFuZ_ao_T9NSswSSv7CioQqWqBi50fhI9QAk`
 
     const API_URL = 'https://adopet-api-i8qu.onrender.com';
     const endpoint = '/mensagem';
@@ -12,11 +10,11 @@ describe('Api Adopet', () => {
         cy.request({
             method: 'GET',
             url: API_URL + endpoint + `/${ID_USER}`,
-            headers: { authorization }
+            headers: Cypress.env()
         }).then((response) => {
             expect(response.status).to.be.equal(200)
             expect(response.body).is.not.empty
-            expect(response.body).to.have.property('msg')    
+            expect(response.body).to.have.property('msg')
         })
     })
 })
