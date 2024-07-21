@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "npx cypress open",
-    "headless": "npx cypress run"
-  },
+  "type": "module",
   "engines": {
     "node": "v20.7.0"
   },
+  "scripts": {
+    "start": "npx cypress open",
+    "headless": "npx cypress run",
+    "cypress:web": "npx cypress open",
+    "cypress:headless": "npx cypress run --browser electron"
+  },
+  "keywords": [],
   "author": "Denis Rosa",
   "license": "ISC",
   "devDependencies": {
