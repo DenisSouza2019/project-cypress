@@ -19,6 +19,7 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
+        working-directory: ./study-cypress-two
         with:
           record: true
         env:
