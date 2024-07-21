@@ -18,9 +18,9 @@ jobs:
         working-directory: ./study-cypress-two
 
       - name: Cypress run Cloud Integration
-        working-directory: ./study-cypress-two
         uses: cypress-io/github-action@v6
         with:
+          working-directory: ./study-cypress-two
           record: true
         env:
           # pass the Cypress Cloud record key as an environment variable
