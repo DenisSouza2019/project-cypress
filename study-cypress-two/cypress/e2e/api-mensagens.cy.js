@@ -8,7 +8,7 @@ describe('Api Adopet', () => {
 
 
 
-    it('Mensagens da API', () => {
+    it('CT1 - Verificar Mensagens da API', () => {
         cy.request({
             method: 'GET',
             url: API_URL + endpoint + `/${ID_USER}`,
