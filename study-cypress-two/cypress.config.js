@@ -13,7 +13,7 @@ module.exports = defineConfig({
       quiet: true,
       overwrite: false,
       html: true,
-      json: false,
+      json: true,
       timestamp: 'dd-mm-yyyy',
     },
 
