@@ -21,6 +21,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           working-directory: ./study-cypress-two
+          quiet: true
           record: false
         env:
           # pass the Cypress Cloud record key as an environment variable
