@@ -18,7 +18,7 @@ jobs:
         working-directory: ./study-cypress-two
 
       - name: Cypress run
-        uses: cypress-io/github-action@v6
+        run: npm run cypress:integration
         working-directory: ./study-cypress-two
         with:
           record: true
