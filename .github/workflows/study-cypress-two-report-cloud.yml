@@ -20,8 +20,8 @@ jobs:
       - name: Cypress run
         run: npm run cypress:integration
         working-directory: ./study-cypress-two
-        with:
-          record: true
+        # with:
+        #   record: true
         env:
           # pass the Cypress Cloud record key as an environment variable
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
