@@ -15,9 +15,10 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        #working-directory: ./study-cypress-two
+        working-directory: ./study-cypress-two
 
       - name: Cypress run Cloud Integration
+        working-directory: ./study-cypress-two
         uses: cypress-io/github-action@v6
         with:
           record: true
