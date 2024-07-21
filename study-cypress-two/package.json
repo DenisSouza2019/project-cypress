@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "engines": {
     "node": "v20.7.0"
   },
@@ -17,6 +16,6 @@
   "author": "Denis Rosa",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.6.4"
+    "cypress": "^13.7.2"
   }
 }
